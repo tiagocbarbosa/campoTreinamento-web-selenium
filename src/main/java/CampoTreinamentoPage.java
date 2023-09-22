@@ -14,7 +14,8 @@ public class CampoTreinamentoPage {
     CampoTreinamentoPage() {
         System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
         driver = new FirefoxDriver();
-        driver.get("file:///C:\\Users\\Tiago.Barbosa\\IdeaProjects\\campoDeTreinamentoWeb-selenium\\src\\main\\resources\\componentes.html");
+//        driver.get("file:///C:\\Users\\Tiago.Barbosa\\IdeaProjects\\campoDeTreinamentoWeb-selenium\\src\\main\\resources\\componentes.html");
+        driver.get(this.getClass().getClassLoader().getResource("componentes.html").toString());
         driver.manage().window().fullscreen();
     }
 
