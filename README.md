@@ -14,7 +14,9 @@ The versions defined below can be equal or higher:
 
 - JUnit 5.10.0;
 
-- Selenium Webdriver 4.12.1.
+- Selenium Webdriver 4.12.1;
+
+- Mozilla Firefox 117.0.1.
 
 ## Usage
 
@@ -22,7 +24,9 @@ To use this project, clone it on your machine and open on your favorite IDE.
 
 To run the test automation, you can run all the test cases located at the ``src/main/java/`` dir.
 
-Note: the web application is not hosted on a server. The automation will test the ``src/main/resources/componentes.html`` file.
+Note 1: the web application is not hosted on a server. The automation will test the ``src/main/resources/componentes.html`` file.
+
+Note 2: the geckodriver used is located at the ``src/main/resources`` dir.
 
 ## References
 
