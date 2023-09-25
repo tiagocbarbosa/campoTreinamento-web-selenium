@@ -1,8 +1,6 @@
 # campoTreinamento-web-selenium
 
-CampoTreinamento is a web application created to be tested using a test framework.
-
-The framework chosen is Selenium Webdriver, and the web app was presented in this [Udemy course](https://www.udemy.com/course/testes-funcionais-com-selenium-webdriver/).
+CampoTreinamento is a web application created to be tested using a test framework and was presented in this [Udemy course](https://www.udemy.com/course/testes-funcionais-com-selenium-webdriver/).  The framework chosen is Selenium Webdriver.
 
 ## Prerequisites
 
@@ -16,7 +14,9 @@ The versions defined below can be equal or higher:
 
 - Selenium Webdriver 4.12.1;
 
-- Mozilla Firefox 117.0.1.
+- Mozilla Firefox 117.0.1;
+
+- Geckodriver 0.33.0.
 
 ## Usage
 
@@ -31,5 +31,7 @@ Note 2: the geckodriver used is located at the ``src/main/resources`` dir.
 ## References
 
 [Selenium Webdriver documentation](https://www.selenium.dev/documentation/webdriver/)
+
+[Download geckodriver](https://github.com/mozilla/geckodriver/releases)
 
 [Selenium Webdriver course on Udemy](https://www.udemy.com/course/testes-funcionais-com-selenium-webdriver/)
