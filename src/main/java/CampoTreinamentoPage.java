@@ -26,8 +26,12 @@ public class CampoTreinamentoPage {
         findElement(by).sendKeys(text);
     }
 
-    public String getTextboxText(By by) {
+    public String getElementValue(By by) {
         return findElement(by).getAttribute("value");
+    }
+
+    public String getElementText(By by) {
+        return findElement(by).getText();
     }
 
     public void clickOnElement(By by) {
@@ -65,6 +69,14 @@ public class CampoTreinamentoPage {
         }
 
         return sports;
+    }
+
+    public void clickOnLink(String linkText) {
+        clickOnElement(By.linkText(linkText));
+    }
+
+    public String getPageHeader(By by) {
+        return getElementText(by);
     }
 
     public void closeBrowser() {

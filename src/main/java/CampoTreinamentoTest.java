@@ -26,14 +26,14 @@ public class CampoTreinamentoTest {
     public void deveInteragirComTextbox() {
         By by = By.id("elementosForm:nome");
         ct.insertText(by, "Olá, Mundo");
-        assertEquals("Olá, Mundo", ct.getTextboxText(by));
+        assertEquals("Olá, Mundo", ct.getElementValue(by));
     }
 
     @Test
     public void deveInteragirComTextArea() {
         By by = By.id("elementosForm:sugestoes");
         ct.insertText(by, "Texto no text area");
-        assertEquals("Texto no text area", ct.getTextboxText(by));
+        assertEquals("Texto no text area", ct.getElementValue(by));
     }
 
     @Test
@@ -71,6 +71,31 @@ public class CampoTreinamentoTest {
                 texts) {
             assertTrue(sports.contains(text));
         }
+    }
+
+    @Test
+    public void deveInteragirComBotaoCliqueMe() {
+        By by = By.id("buttonSimple");
+        ct.clickOnElement(by);
+
+        String buttonValue = ct.getElementValue(by);
+        assertEquals("Obrigado!", buttonValue);
+    }
+
+    @Test
+    public void deveInteragirComLinkVoltar() {
+        ct.clickOnLink("Voltar");
+
+        By by = By.id("resultado");
+        String resultText = ct.getElementText(by);
+        assertEquals("Voltou!", resultText);
+    }
+
+    @Test
+    public void deveValidarTituloDaPagina() {
+        By by = By.tagName("h3");
+        String headerText = ct.getPageHeader(by);
+        assertEquals("Campo de Treinamento", headerText);
     }
 
 }
